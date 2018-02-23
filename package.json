@@ -1,0 +1,11 @@
+{
+  "name": "partial-upload",
+  "version": "0.1.0",
+  "description": "Simple server",
+  "main": "server.js",
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-rc.4"
+  }
+}

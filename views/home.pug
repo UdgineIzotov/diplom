@@ -1,0 +1,51 @@
+style
+    include ../style.css
+
+each category in categories
+    if sortedFiles[category].files.length
+        h2= sortedFiles[category].category
+        ul
+            case category
+                when 'Images'
+                    each file in sortedFiles[category].files
+                        li
+                            span= `${file.path} ( Retina, scale=${file.scale} )`
+                            a(href=file.path)= 'download'
+                            a(href=file.path class='remove' data-path=file.path)= 'remove'
+                when 'Logs'
+                    each file in sortedFiles[category].files
+                        li
+                            h4= `${file.date.year}-${file.date.month}`
+                            span= `${file.path} ( ${file.type} )`
+                            a(href=file.path)= 'download'
+                            a(href=file.path class='remove' data-path=file.path)= 'remove'
+                default
+                    each file in sortedFiles[category].files
+                        li
+                            span= `${file.path} `
+                            a(href=file.path)= 'download'
+                            a(href=file.path class='remove' data-path=file.path)= 'remove'
+
+script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js")
+script.
+    window.onload = () => {
+        $('.remove').click( (e) => {
+            e.preventDefault();
+            
+            if (confirm("Are.You.Sure?")) {
+            
+            $.ajax({
+                url: e.target.href,
+                type: 'DELETE',
+                success: location.reload()
+                });
+            }
+        });
+    }
+
+
+
+
+
+
+
