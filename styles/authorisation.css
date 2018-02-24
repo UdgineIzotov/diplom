@@ -1,0 +1,35 @@
+
+.auth-content {
+    padding: 20px 100px 0px;
+    width: 70%;
+}
+
+label {
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.form-table td {
+ padding-bottom: 15px;
+}
+
+.form-submit-section {
+    text-align: center;
+}
+
+.form-submit-btn {
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid #82C7E0;
+    display: inline-block;
+    outline: none;
+    font-size: 18px;
+    color: #82C7E0;
+    transition: 0.5s ease;
+
+}
+
+.form-submit-btn:hover {
+    background: #82C7E0;
+    color: white;
+}

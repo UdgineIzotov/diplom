@@ -1,0 +1,14 @@
+section(class="auth-content")
+    form(action="/login" method="post")
+        table(class="form-table")
+            tr
+                td: label(for="login") Почта
+                td: input(type="email" name="login" id="login")
+            tr
+                td: label(for="pass") Пароль
+                td: input(type="password" name="pass" id="pass")
+            tr(class="form-error-section")
+                td(colspan="2" id="form-errors")
+            tr(class="form-submit-section")
+                td(colspan="2")
+                    button(type="submit" class="form-submit-btn") Вход

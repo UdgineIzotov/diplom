@@ -1,0 +1,12 @@
+aside(class="left-menu")
+    nav(class="left-menu-nav")
+        ul
+            li: a(
+                class=`left-menu-link ${(title === 'login') ? 'active-link' : ''}`
+                href="/login"
+                ) Авторизация
+            li: a( 
+                class=`left-menu-link ${(title === 'registration') ? 'active-link' : ''}` 
+                href="/registration"
+                ) Регистрация
+                   

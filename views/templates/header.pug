@@ -1,0 +1,13 @@
+header
+    if (!user)
+        ul(class="header-nav")
+            li
+                a(href="/login" class="link-btn login-btn" title="Вход") Вход
+    else
+        ul(class="header-nav")
+            li
+                a(href="/profile" class="link-btn login-btn" title="Профиль") Профиль
+            li
+                a(href="/logout" class="link-btn login-btn" title="Выход") Выход
+
+

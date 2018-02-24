@@ -1,0 +1,190 @@
+/**
+ * HEADER STYLES
+ */ 
+.header-nav li {
+    margin: 10px 15px;    
+    display: inline-block;
+    list-style: none
+}
+
+.header-nav {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.login-btn {
+    padding: 10px 15px;
+    border: 2px solid #82C7E0;
+    font-weight: 600;
+    color: #82C7E0;
+    transition: 0.5s ease;
+}
+
+.login-btn:hover {
+    
+    background: #82C7E0;
+    color:white;
+}
+
+/**
+ * MAIN STYLES
+ */
+
+ main {
+     padding-top: 50px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;     
+ }
+
+ .left-menu {
+     padding: 20px;
+     width: 30%;   
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: flex-start;  
+ }
+ 
+ .left-menu-nav li {
+    padding-bottom: 5px; 
+    list-style: none;
+ }
+
+ .left-menu-link {
+     padding: 0 10px 10px 10px;
+     display: inline-block;
+     font-size: 18px;     
+     text-decoration: none;
+     color: #2a3f50;
+ }
+
+ .left-menu-link:hover {
+    color: #82C7E0;
+}
+
+
+
+ 
+
+/**
+ * FOOTER STYLES
+ */
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(141, 165, 184, 0.2);
+}
+
+.footer-nav {
+    margin: 10px 30px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footer-nav li {
+    margin: 10px;
+    list-style: none;    
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #2a3f50;
+}
+
+.footer-link:hover {
+    color: #2380B5;
+    text-decoration: underline;
+}
+
+/**
+ * COMMON STYLES
+ */
+
+ 
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+ body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    font-family: Tahoma, Geneva, sans-serif;
+ }
+
+.link-btn {
+    text-decoration: none;
+}
+
+.active-link {
+    color: #82C7E0 !important;
+}
+
+/**
+ * PROFILE PAGE
+ */
+
+ .profile-page {
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+ }
+
+/**
+ * LOGIN PAGE
+ */
+
+ 
+.auth-content {
+    padding: 20px 100px 0px;
+    width: 70%;
+}
+
+label {
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.form-table {
+    padding: 10px;
+    box-shadow: 0 0 1px 0 #82C7E0;
+}
+
+.form-table td {
+ padding-bottom: 15px;
+}
+
+.form-submit-section {
+    text-align: center;
+}
+
+.form-submit-btn {
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid #82C7E0;
+    display: inline-block;
+    outline: none;
+    font-size: 18px;
+    color: #82C7E0;
+    transition: 0.5s ease;
+
+}
+
+.form-submit-btn:hover {
+    background: #82C7E0;
+    color: white;
+}

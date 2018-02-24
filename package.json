@@ -2,10 +2,15 @@
   "name": "partial-upload",
   "version": "0.1.0",
   "description": "Simple server",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "main": "server.js",
   "author": "Me",
   "license": "ISC",
   "dependencies": {
-    "pug": "^2.0.0-rc.4"
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5"
   }
 }
