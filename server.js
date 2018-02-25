@@ -1,14 +1,20 @@
-var express = require('express');
-var http = require('http'); 
-var favicon = require('serve-favicon');
-var path = require('path');
-var app = express();
+const express = require('express');
+const http = require('http'); 
+const favicon = require('serve-favicon');
+const path = require('path');
+const db = require('./app/DataBaseModule');
+const view = require('./app/ViewModule');
 
-var view = require('./app/ViewModule');
+const app = express();
 
 console.log(`Listen on 'localhost:3210'`);
 
 app.use(favicon(path.join(__dirname, 'favicon.ico')));
+app.use(express.static(__dirname + '/images'))
+app.use(express.json());
+app.use(express.urlencoded({     
+    extended: true
+  }));
 
 app.get('/', function(req, res) {
     res.redirect('/home');
@@ -48,18 +54,32 @@ app.get('/profile', function(req, res) {
 })
 
 app.post('/login', function(req, res) {
-    console.log("done");
+
+    const callback = (err, results, fields) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({err, result, fields}, null, 3));
+    }
+
+    const result  = db.getUsers(callback);    
+});
+
+app.post('/registration', (req, res) => {
+    const login = req.body.login;
+    const password = req.body.pass;
+
+    db.setUser([[login, password]], (err, results, fields) => {
+        console.log(err);
+    });
 
     res.redirect('/profile');
 });
-
-app.post('/registration', function(req, res) {
-    console.log('done');
-
-    res.redirect('/profile');
-});
-
-app.use(express.static(__dirname + '/images'))
+/*
+{
+   "login": "asdas@a",
+   "pass": "asdsa",
+   "passConf": "sadas"
+}
+*/
 
 
 app.listen(3210);
