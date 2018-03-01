@@ -68,7 +68,7 @@ app.post('/registration', (req, res) => {
     const password = req.body.pass;
 
     db.setUser([[login, password]], (err, results, fields) => {
-        console.log(err);
+        console.log(err, results, fields);
     });
 
     res.redirect('/profile');
