@@ -3,9 +3,23 @@ include ./templates/head.pug
 
 body
     include ./templates/header.pug
-    main
-        div(class="user-name") User name
-        div(class="user-subjects") Subjects
-        div(class="user-grad-from") graduated from
-        div(class="academic-degree") academic degree
+    main(class="profile-page")
+        .profile-section 
+            .profile-section-header 
+                span User name
+                button(class='profile-section-btn') Добавить
+        .profile-section
+            .profile-section-header
+                span Subjects
+                button(class='profile-section-btn' id='add-subject-btn') Добавить
+        .profile-section
+            .profile-section-header
+                span graduated from
+                button(class='profile-section-btn' id='add-graduated-btn') Добавить
+        .profile-section 
+            .profile-section-header 
+                span academic degree
+                button(class='profile-section-btn' id='add-degree-btn') Добавить
     include ./templates/footer.pug
+    .modal-container
+    script(src="/js/profile.js")

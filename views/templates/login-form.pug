@@ -8,7 +8,7 @@ section(class="auth-content")
                 td: label(for="pass") Пароль
                 td: input(type="password" name="pass" id="pass")
             tr(class="form-error-section")
-                td(colspan="2" id="form-errors")
+                td(colspan="2" id="form-errors") #{error}
             tr(class="form-submit-section")
                 td(colspan="2")
                     button(type="submit" class="form-submit-btn") Вход
